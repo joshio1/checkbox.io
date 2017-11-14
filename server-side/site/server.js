@@ -65,6 +65,7 @@ app.post('/api/study/admin/open/', admin.openStudy );
 app.post('/api/study/admin/close/', admin.closeStudy );
 app.post('/api/study/admin/notify/', admin.notifyParticipant);
 
+app.get('/api/toggleResearchFeature', create.toggleResearchFeature);
 //// ################################
 
 //app.post('/api/upload', upload.uploadFile );
@@ -82,8 +83,6 @@ app.post('/api/study/admin/notify/', admin.notifyParticipant);
 //app.post('/api/design/survey/vote/cast', votes.castVote );
 //app.get('/api/design/survey/vote/status', votes.status );
 //app.get('/api/design/survey/vote/stat/:id', votes.getSurveyStats );
-
-
 
 app.listen(process.env.MONGO_PORT);
 console.log('Listening on port 3002...');
